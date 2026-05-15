@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const result = await response.json();
                 if (response.ok) {
                   showMessage(result.message, "success");
-                  location.reload();
+                  await fetchActivities();
                 } else {
                   showMessage(result.detail || "An error occurred", "error");
                   deleteBtn.disabled = false;
