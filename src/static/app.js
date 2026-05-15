@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const result = await response.json();
                 if (response.ok) {
                   showMessage(result.message, "success");
-                  await fetchActivities();
+                  location.reload();
                 } else {
                   showMessage(result.detail || "An error occurred", "error");
                   deleteBtn.disabled = false;
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (response.ok) {
         showMessage(result.message, "success");
         signupForm.reset();
-        await fetchActivities();
+        location.reload();
       } else {
         showMessage(result.detail || "An error occurred", "error");
       }
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (response.ok) {
         showMessage(result.message, "success");
         unregisterForm.reset();
-        await fetchActivities();
+        location.reload();
       } else {
         showMessage(result.detail || "An error occurred", "error");
       }
